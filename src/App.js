@@ -1,5 +1,4 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import "../src/css/App.css";
 import Router from "./utils/Router";
 import MenuBar from "./utils/MenuBar";
 import BottomInfo from "./utils/BottomInfo";

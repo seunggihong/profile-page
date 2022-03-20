@@ -7,8 +7,8 @@ function MenuBar() {
         <text>Hong Seunggi</text>
       </a>
       <div className="menu-bar-detail">
-        <a href="/recode">
-          <text>Recode</text>
+        <a href="/profile">
+          <text>Profile</text>
         </a>
         <a href="/project">
           <text>Project</text>

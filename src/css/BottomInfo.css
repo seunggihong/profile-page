@@ -4,6 +4,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+}
+
+.bottom-info-frame:hover {
+  opacity: 1;
+  transition: 2s;
 }
 
 .bottom-info-frame a {
