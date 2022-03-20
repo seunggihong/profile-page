@@ -5,11 +5,12 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
+  transition: 2s ease-in-out;
 }
 
 .bottom-info-frame:hover {
   opacity: 1;
-  transition: 2s;
+  transition: 1.5s;
 }
 
 .bottom-info-frame a {
