@@ -1,21 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import MainPage from "./pages/MainPage";
-import RecodePage from "./pages/RecodePage";
-import ProjectPage from "./pages/ProjectPage";
-import AboutPage from "./pages/AboutPage";
+import Router from "./utils/Router";
 import MenuBar from "./utils/MenuBar";
+import BottomInfo from "./utils/BottomInfo";
 
 function App() {
   return (
     <div className="App">
-      <MenuBar></MenuBar>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/recode" element={<RecodePage />} />
-        <Route path="/project" element={<ProjectPage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <MenuBar />
+      <Router />
+      <BottomInfo />
     </div>
   );
 }

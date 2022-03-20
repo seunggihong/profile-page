@@ -3,8 +3,6 @@
   width: auto;
   background-color: black;
   margin-top: 25px;
-  margin-left: 15px;
-  margin-right: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,4 +50,7 @@
   border: solid 2px white;
   width: 50%;
   transition: width 0.5s ease-in-out;
+}
+.menu-bar-detail a:active {
+  background-color: gray;
 }

@@ -1,0 +1,12 @@
+.bottom-info-frame {
+  height: 100px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-info-frame a {
+  margin: 10px;
+  display: flex;
+}
