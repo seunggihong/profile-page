@@ -1,0 +1,37 @@
+.photo-card-item img {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 1s ease-in-out;
+}
+
+.photo-card-frame {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-card-item {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.photo-card-item p {
+  color: white;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+.photo-card-item:hover p {
+  opacity: 1;
+  transition: 2s ease-in;
+}
+
+.photo-card-item:hover img {
+  opacity: 0;
+}
