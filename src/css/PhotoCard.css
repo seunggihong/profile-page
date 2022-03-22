@@ -20,14 +20,14 @@
   align-items: center;
   position: relative;
 }
-.photo-card-item p {
+.photo-card-item div {
   color: white;
   position: absolute;
   opacity: 0;
   transition: 0.5s ease-out;
 }
 
-.photo-card-item:hover p {
+.photo-card-item:hover div {
   opacity: 1;
   transition: 2s ease-in;
 }

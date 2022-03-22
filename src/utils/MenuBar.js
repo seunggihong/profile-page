@@ -4,17 +4,17 @@ function MenuBar() {
   return (
     <div className="menu-bar">
       <a className="name-tag" href="/">
-        <text>Hong Seunggi</text>
+        <p>Hong Seunggi</p>
       </a>
       <div className="menu-bar-detail">
         <a href="/profile">
-          <text>Profile</text>
+          <p>Profile</p>
         </a>
         <a href="/project">
-          <text>Project</text>
+          <p>Project</p>
         </a>
         <a href="/about">
-          <text>About</text>
+          <p>About</p>
         </a>
       </div>
     </div>

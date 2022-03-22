@@ -4,10 +4,10 @@ function PhotoCard(props) {
   return (
     <div className="photo-card-frame">
       <div className="photo-card-item">
-        <img src={props.imgLink} />
-        <p>
+        <img src={props.imgLink} alt="main" />
+        <div>
           <h1>{props.title}</h1>
-        </p>
+        </div>
       </div>
     </div>
   );
