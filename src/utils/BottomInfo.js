@@ -5,10 +5,10 @@ function BottomInfo() {
   return (
     <div className="bottom-info-frame">
       <a href="https://github.com/seunggihong" target="blank">
-        <FaInstagram size={30} className="fa-insta" />
+        <FaGithub size={30} className="fa-github" />
       </a>
       <a href="https://www.instagram.com/iggnuxs/" target="blank">
-        <FaGithub size={30} className="fa-github" />
+        <FaInstagram size={30} className="fa-insta" />
       </a>
     </div>
   );
