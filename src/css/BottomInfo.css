@@ -1,9 +1,8 @@
 .bottom-info-frame {
-  height: 100px;
-  background-color: black;
+  height: 10%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   opacity: 0;
   transition: 2s ease-in-out;
 }
@@ -14,6 +13,11 @@
 }
 
 .bottom-info-frame a {
+  color: white;
   margin: 10px;
-  display: flex;
+  transition: 0.3s ease-in-out;
+}
+
+.bottom-info-frame a:hover {
+  transform: scale(1.2);
 }

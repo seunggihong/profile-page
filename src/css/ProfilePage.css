@@ -1,5 +1,41 @@
 .profile-body {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.profile-body h2 {
+  margin: 10px;
+  text-align: center;
+}
+
+.profile-intro-frame {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-intro-frame-img {
+  width: 250px;
+  height: 250px;
+  margin-right: 10px;
+}
+.profile-intro-frame-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-intro-frame-text {
+  width: 300px;
+  height: 250px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 2px white;
+}
+
+.profile-intro-frame-text p {
+  margin: 10px;
 }
