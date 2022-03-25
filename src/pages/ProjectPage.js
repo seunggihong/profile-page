@@ -9,26 +9,11 @@ function ProjectPage() {
   const url = "https://api.github.com/users/seunggihong/repos";
 
   useEffect(() => {
-    axios
-      .get(url)
-      .then((Response) => {
-        for (let i = 0; i < Response.data.length; i++) {
-          const newData = (
-            <Gitrepo
-              key={Response.data[i].id}
-              htmlUrl={Response.data[i].html_url}
-              name={Response.data[0].name}
-            />
-          );
-          let newDatas = [...datas];
-          newDatas.push(newData);
-          setDatas(newDatas);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+    axios.get(url).then(({ data }) => {
+      setDatas(data);
+    });
+    console.log(datas);
+  }, []);
 
   return (
     <motion.div
@@ -36,7 +21,6 @@ function ProjectPage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      {console.log(datas)}
       <div className="project-frame">
         <div className="project-frame-div"></div>
       </div>
