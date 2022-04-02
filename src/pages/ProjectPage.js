@@ -9,11 +9,21 @@ function ProjectPage() {
   const url = "https://api.github.com/users/seunggihong/repos";
 
   useEffect(() => {
-    axios.get(url).then(({ data }) => {
-      setDatas(data);
+    axios.get(url).then((response) => {
+      for (var i = 0; i < response.data.lenth; i++) {
+        const newData = {
+          id: response.data[i].id,
+          name: response.data[i].name,
+          url: response.data[i].html_url,
+        };
+        const newDatas = [...datas];
+        newDatas.push(newData);
+        setDatas(newDatas);
+      }
     });
-    console.log(datas);
   }, []);
+
+  console.log(datas);
 
   return (
     <motion.div
