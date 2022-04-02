@@ -4,26 +4,33 @@ import Gitrepo from "../utils/Gitrepo";
 import axios from "axios";
 import "../css/ProjectPage.css";
 
+function importData(url, setDatas) {
+  axios.get(url).then((response) => {
+    var newDatas = [];
+    for (var i = 0; i < response.data.length; i++) {
+      const newData = {
+        id: response.data[i].id,
+        name: response.data[i].name,
+        url: response.data[i].html_url,
+      };
+      newDatas.push(newData);
+    }
+    setDatas(newDatas);
+  });
+}
+
 function ProjectPage() {
   const [datas, setDatas] = useState([]);
   const url = "https://api.github.com/users/seunggihong/repos";
 
   useEffect(() => {
-    axios.get(url).then((response) => {
-      for (var i = 0; i < response.data.lenth; i++) {
-        const newData = {
-          id: response.data[i].id,
-          name: response.data[i].name,
-          url: response.data[i].html_url,
-        };
-        const newDatas = [...datas];
-        newDatas.push(newData);
-        setDatas(newDatas);
-      }
-    });
+    importData(url, setDatas);
+    return datas;
   }, []);
 
-  console.log(datas);
+  const gitrepoCreate = datas.map((index, name, url) => (
+    <Gitrepo id={index} name={name} htmlUrl={url} />
+  ));
 
   return (
     <motion.div
@@ -32,7 +39,7 @@ function ProjectPage() {
       transition={{ duration: 2 }}
     >
       <div className="project-frame">
-        <div className="project-frame-div"></div>
+        <div className="project-frame-div">{gitrepoCreate}</div>
       </div>
     </motion.div>
   );
