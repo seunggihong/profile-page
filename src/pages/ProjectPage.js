@@ -28,8 +28,8 @@ function ProjectPage() {
     return datas;
   }, []);
 
-  const gitrepoCreate = datas.map((index, name, url) => (
-    <Gitrepo id={index} name={name} htmlUrl={url} />
+  const gitrepoCreate = datas.map((datas) => (
+    <Gitrepo id={datas.id} name={datas.name} htmlUrl={datas.url} />
   ));
 
   return (
@@ -38,8 +38,8 @@ function ProjectPage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      <div className="project-frame">
-        <div className="project-frame-div">{gitrepoCreate}</div>
+      <div className="project_frame">
+        <div className="project_frame_div">{gitrepoCreate}</div>
       </div>
     </motion.div>
   );

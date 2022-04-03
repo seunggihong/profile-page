@@ -1,3 +1,20 @@
-.git-repo-frame {
-  background-color: red;
+.git_repo_frame {
+  margin: 10px;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.git_repo_frame a {
+  color: white;
+  text-decoration: none;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: gray;
 }
