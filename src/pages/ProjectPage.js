@@ -6,6 +6,7 @@ import "../css/ProjectPage.css";
 
 function importData(url, setDatas) {
   axios.get(url).then((response) => {
+    console.log(response.data);
     var newDatas = [];
     for (var i = 0; i < response.data.length; i++) {
       const newData = {
