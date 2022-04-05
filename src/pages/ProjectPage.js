@@ -39,6 +39,7 @@ function ProjectPage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
+      <h1>GitHub Repositories</h1>
       <div className="project_frame">
         <div className="project_frame_div">{gitrepoCreate}</div>
       </div>
