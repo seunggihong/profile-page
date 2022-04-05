@@ -1,0 +1,15 @@
+.about_frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about_frame_icon {
+  display: flex;
+}
+
+.about_frame_icon a {
+  margin: 30px;
+  color: white;
+}
