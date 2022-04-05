@@ -6,7 +6,6 @@ import "../css/ProjectPage.css";
 
 function importData(url, setDatas) {
   axios.get(url).then((response) => {
-    console.log(response.data);
     var newDatas = [];
     for (var i = 0; i < response.data.length; i++) {
       const newData = {
@@ -29,8 +28,8 @@ function ProjectPage() {
     return datas;
   }, []);
 
-  const gitrepoCreate = datas.map((datas) => (
-    <Gitrepo id={datas.id} name={datas.name} htmlUrl={datas.url} />
+  const gitrepoCreate = datas.map((datas, index) => (
+    <Gitrepo id={datas.id} name={datas.name} htmlUrl={datas.url} key={index} />
   ));
 
   return (
